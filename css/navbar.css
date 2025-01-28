@@ -1,0 +1,337 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgba(141, 141, 140, 0.021); /* Change background color to transparent */
+    color: white; /* Change text color to white */
+    padding: 1em;
+    text-align: center;
+    font-weight: bold; /* Make all text bold */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow effect */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transition for background, text color, and shadow */
+    position: fixed; /* Change from sticky to fixed */
+    width: 100%; /* Ensure it spans the full width */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    border-radius: 0px 0px 50px 50px; /* Remove border radius for square edges */
+}
+
+nav.scrolled {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0); /* Change text color to black */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add more pronounced shadow when scrolled */
+}
+
+nav.scrolled .logo-container span,
+nav.scrolled .menu-container a,
+nav.scrolled .dropbtn,
+nav.scrolled .icon {
+    color: rgb(47, 152, 179); /* Change text and icon color to black */
+}
+
+nav.scrolled .dropdown-content a {
+    color: black;
+}
+
+nav:hover {
+    background-color: white; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add more pronounced shadow on hover */
+}
+
+nav:hover .logo-container span,
+nav:hover .menu-container a,
+nav:hover .dropbtn,
+nav:hover .icon {
+    color: rgb(31, 175, 201); /* Change text and icon color on hover */
+}
+
+nav:hover .dropdown-content a {
+    color: black; /* Ensure dropdown links remain black on hover */
+}
+
+nav .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Changed from center to space-between */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+nav .logo-container {
+    flex: 1;
+    text-align: left;
+    position: relative; /* Add relative positioning */
+}
+
+nav .logo-container img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+nav .logo-container span {
+    font-size: 1em;
+    margin-left: 20px; 
+    color: white; /* Change text color to white */
+    vertical-align: middle;
+    display: inline-block;
+}
+
+nav .logo-container span br + span {
+    margin-left: 20px; /* Adjust the value as needed */
+}
+
+nav .menu-container {
+    display: inline-block;
+    text-align: left;
+    flex: 2;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 1em;
+    position: relative;
+}
+
+nav ul li a {
+    color: white; /* Change link color to white */
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+    transition: font-size 0.3s, background-color 0.3s, border-radius 0.3s; /* Smooth transition for font size, background color, and border radius */
+    border-radius: 0; /* Remove border radius */
+}
+
+nav ul li a:hover {
+    background-color: transparent; /* Remove background color on hover */
+    border-radius: 0; /* Remove border radius on hover */
+    color: #007bff; /* Change text color on hover */
+    text-decoration: underline; /* Add underline to indicate hover */
+}
+
+nav ul li a.active {
+    font-size: 1.2em; /* Increase font size for active page */
+    background-color: transparent; /* Remove background color for active page */
+    border-radius: 0; /* Remove border radius for active page */
+    color: white; /* Reset text color for active page */
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: white; /* Change background color to white */
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to dropdown */
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+    margin: 0;
+}
+
+nav ul li ul li a {
+    padding: 1em;
+    display: block;
+    color: black; /* Change link color to black */
+}
+
+nav ul li ul li a:hover {
+    background-color: #f1f1f1; /* Change hover background color */
+    color: #007bff; /* Change text color on hover */
+}
+
+nav .language-switcher {
+    flex: 1;
+    text-align: right;
+}
+
+nav .language-switcher img {
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 0px;
+}
+
+nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+nav .dropbtn {
+    color: white; /* Change button text color to white */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background: none; /* Remove background color */
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white; /* Change background color to white */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Align to the right */
+}
+
+nav .dropdown-content a {
+    color: rgb(0, 0, 0); /* Change link color to black */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+nav .dropdown-content a img {
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px; /* Add margin for spacing */
+}
+
+nav .dropdown-content a:hover {
+    background-color: #f1f1f1; /* Change hover background color */
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav .dropdown:hover .dropbtn {
+    background-color: none; /* Remove background color on hover */
+}
+
+nav .search-icon {
+    margin-left: 10px;
+    cursor: pointer;
+    vertical-align: middle;
+    color: white; /* Change icon color to white */
+}
+
+nav .search-container {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav .search-container input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+nav .icon {
+    margin-right: 5px;
+    vertical-align: middle;
+    font-size: 1.5em; /* Increase icon size */
+    transition: color 0.3s; /* Smooth transition for color change */
+    color: white; /* Change icon color to white */
+}
+
+nav .icon:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+nav .icon-container {
+    display: flex;
+    align-items: center;
+}
+
+nav .icon-container .fa-map {
+    margin-right: 15px; /* Adjust the margin for the map icon */
+}
+
+nav .icon-container .fa-wheelchair {
+    margin-right: 15px; /* Adjust the margin for the wheelchair icon */
+}
+
+nav .menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0); /* Change button color to white */
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.airport-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white; /* Change background color to white */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Position below the icon */
+    left: 50%; /* Center align with the icon */
+    transform: translateX(-50%); /* Center align with the icon */
+}
+
+.airport-dropdown a {
+    color: rgb(30, 57, 143); /* Change link color to black */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.airport-dropdown a:hover {
+    background-color: #f1f1f1; /* Change hover background color */
+}
+
+.airport-icon:hover {
+    color: #007bff; /* Change color on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+@media (max-width: 768px) {
+    nav .navbar-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+    nav .menu-container {
+        width: 100%; /* Full width */
+        text-align: center; /* Center text */
+        display: none; /* Hide menu by default */
+    }
+    nav ul {
+        display: block; /* Block display for full width */
+    }
+    nav ul li {
+        display: block; /* Block display for full width */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 1em; /* Add bottom margin */
+    }
+    nav .language-switcher {
+        text-align: center; /* Center text */
+        width: 100%; /* Full width */
+    }
+    nav .icon-container {
+        justify-content: center; /* Center icons */
+        width: 100%; /* Full width */
+    }
+    nav .menu-button {
+        display: block; /* Show menu button */
+    }
+}

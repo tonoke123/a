@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TALORED SERVICES</title>
+    <link rel="stylesheet" href="css/Services.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/flight-info.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="banner">
+        <img src="assets/images/banners/s1.jpg" alt="Dine Banner">
+        <h1>TALORED SERVICES</h1>
+    </div>
+   
+    <div class="card-container">
+        <div class="card" onclick="toggleCard(this, 'extra-01')">
+            <div class="card-icon"><i class="fas fa-baby-carriage"></i></div>
+            <div class="card-title">01</div>
+            <div class="card-description">Pregnant Women, Infants, Child</div>
+        </div>
+      
+        <div class="card" onclick="toggleCard(this, 'extra-02')">
+            <div class="card-icon"><i class="fas fa-wheelchair"></i></div>
+            <div class="card-title">02</div>
+            <div class="card-description">Disabled and Elderly</div>
+        </div>
+    
+        <div class="card" onclick="toggleCard(this, 'extra-03')">
+            <div class="card-icon"><i class="fas fa-dog"></i></div>
+            <div class="card-title">03</div>
+            <div class="card-description">Traveling with Pets</div>
+        </div>
+    </div>
+
+    <div id="extra-01" class="card-extra">
+        <h2>Pregnant women, Infants, Children</h2>
+        <p><i class="fas fa-info-circle"></i> The information on the website is for reference only. Please check with the corresponding airline/institution/facility for accuracy.</p>
+        <h3>Boarding guidelines for pregnant mothers and infants</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pregnant mothers</td>
+                    <td>
+                        <strong>Pregnancy under 32 weeks (under 8 months)</strong><br>
+                        May travel except in cases where the doctor prohibited flying
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <strong>Pregnancy over 32 weeks, under 36 weeks (over 8 months, under 9 months)</strong><br>
+                        May travel only if you sign a waiver form and have written approval or medical certificate from a medical professional within 7 days of travel date
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <strong>Pregnancy over 36 weeks (over 9 months, 32 weeks in the case of multiple pregnancy)</strong><br>
+                        Not allowed to board for flight and passenger safety.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Infants</td>
+                    <td>
+                        <strong>Infants over 7 days old may generally board flights.</strong><br>
+                        Korean Air only allows international and domestic flights for infants over 7 days old, and Asiana only allows domestic flights for infants over 7 days old and international flights for infants over 14 days old. (There may be exceptional cases where boarding is possible after approval process.)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Services within the airport</h3>
+        <p>Stroller rental service</p>
+        <p>You can rent wheelchairs and strollers free of charge at any information desk within the airport.</p>
+        <div class="terminal-maps">
+            <div>
+                <h4>Terminal 1</h4>
+                <img src="images/defaults/no-image.png" alt="Terminal 1 Map">
+            </div>
+            <div>
+                <h4>Terminal 2</h4>
+                <img src="images/defaults/no-image.png" alt="Terminal 2 Map">
+            </div>
+        </div>
+    </div>
+
+    <div id="extra-02" class="card-extra">
+        <h2>Disabled and Elderly</h2>
+        <p><i class="fas fa-info-circle"></i> The information on the website is for reference only. Please check with the corresponding airline/institution/facility for accuracy.</p>
+        <h3>Transportation and parking</h3>
+        
+        <div class="transportation-container">
+            <div class="transportation-item">
+                <h4>Disability parking space</h4>
+                <img src="images/defaults/no-image.png" alt="Disability Parking Space" class="extra-image">
+                <p>For your convenience, there are short-term disability parking areas near each airport counter. There are disability parking area in the short-term parking lot (Level 1, Basement 1) and near the elevator and shuttle buses in the long-term parking lot.</p>
+            </div>
+            <div class="transportation-item">
+                <h4>Disability standby area</h4>
+                <img src="images/defaults/no-image.png" alt="Disability Standby Area" class="extra-image">
+                <p>There is a specially marked standby area for people with disability on the Passenger Terminal road (directly in front of Exit 3 and 7 and 12).</p>
+            </div>
+            <div class="transportation-item">
+                <h4>Help-phone service</h4>
+                <img src="images/defaults/no-image.png" alt="Help Phone Service" class="extra-image">
+                <p>Pick up the receiver to be directly connected to the nearest Information Desk Hot Line.</p>
+                <p>• Operating hours: 6:00 ~ 22:00</p>
+            </div>
+        </div>
+        
+        <div class="transportation-container">
+            <div class="transportation-item">
+                <h4>Wheelchair lift service</h4>
+                <img src="images/defaults/no-image.png" alt="Wheelchair Lift Service" class="extra-image">
+                <p>We provide free transportation service for the convenience of disabled persons who have difficulty in moving from the long-term parking lot of Incheon International Airport to the passenger terminal.</p>
+            </div>
+            <div class="transportation-item">
+                <h4>Valet parking service</h4>
+                <img src="images/defaults/no-image.png" alt="Valet Parking Service" class="extra-image">
+                <p>Parking is made easy and safe with the airport-approved valet parking service (at a fee).</p>
+            </div>
+            <div class="transportation-item">
+                <h4>Metro Train Pickup Service</h4>
+                <img src="images/defaults/no-image.png" alt="Metro Train Pickup Service" class="extra-image">
+                <p>At Incheon International Airport, the metro train pickup service is available for the departing mobility handicapped who often find it inconvenient to move.</p>
+                <p>• To us: Request service before you arrive at the airport on the departing day through the Help Desk (1577-2600), information desk, or Help Phone service.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="extra-03" class="card-extra">
+        <h2>Guide for Accompanying Pets in Incheon Airport</h2>
+        
+        <div class="pet-guide-container">
+            <div class="pet-guide-item">
+                <img src="images/defaults/no-image.png" alt="Kennel" class="pet-icon">
+                <h4>Make sure to use a kennel when indoors!</h4>
+                <p>• Use a kennel when indoors (e.g. terminal, parking lot). However, leashes (around 50 cm) and strollers are allowed in unavoidable circumstances.</p>
+            </div>
+            <div class="pet-guide-item">
+                <img src="images/defaults/no-image.png" alt="Dangerous Dogs" class="pet-icon">
+                <h4>Dangerous dogs are limited to arrival/departure!</h4>
+                <p>• To ensure safety, dangerous dog breeds* must be kept in a kennel and are limited to arrival/departure.</p>
+                <p>^ Tosa, American Pit Bull Terrier, American Staffordshire Terrier, Staffordshire Bull Terrier, Rottweiler</p>
+            </div>
+            <div class="pet-guide-item">
+                <img src="images/defaults/no-image.png" alt="Leash" class="pet-icon">
+                <h4>Keep your pet leashed at 50 cm in length!</h4>
+                <p>• The airport is a facility which many other people use together. Make sure to keep your pet by your side at all times in consideration of other passengers.</p>
+            </div>
+            <div class="pet-guide-item">
+                <img src="images/defaults/no-image.png" alt="Trash" class="pet-icon">
+                <h4>Pick up and dispose of pet waste!</h4>
+                <p>• Prepare a bag and tissue, and make sure to immediately pick up and dispose of pet waste. If you do not have a waste bag, please go to the Info Desk.</p>
+            </div>
+        </div>
+        
+        <p>※ Please note that you may be not allowed to use the airport if you cause discomfort to other passengers in the airport.</p>
+        
+        <h3>Departures</h3>
+        <p>You must check and meet animal quarantine requirements for pets (e.g. dog, cat) such as from the animal quarantine agency in your destination country or the Embassy in Korea.</p>
+    </div>
+
+
+    <div id="footer" class="fade-in"></div>
+    <script src="js/Services.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js\navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/flight-info.js"></script>
+</body>
+</html>

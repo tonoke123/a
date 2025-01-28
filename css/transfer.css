@@ -1,0 +1,132 @@
+.info-boxes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Increase margin to separate from the top container */
+    gap: 10px; 
+    flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
+}
+
+.info-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 0px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-box img {
+    width: 100%;
+    height: 200px; /* Reduce height */
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.info-box img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.info-box h2 {
+    margin-top: 0;
+    background-color: #c9a693;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 0px 5px 5px 0px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    top: -20px;
+}
+
+.info-box p {
+    margin: 10px 0 0;
+    padding: 20px;
+    background-size: cover;
+    border-radius: 0 0 10px 10px;
+}
+
+.info-box .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.info-box .grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-size: 14px;
+    text-align: center;
+}
+
+.info-box .grid div i {
+    color: #808080;
+    margin-bottom: 10px;
+    font-size: 40px;
+    transition: color 0.3s, transform 0.3s ease;
+}
+
+.info-box .grid div:hover i {
+    color: #59ced6;
+    transform: scale(1.2) rotateY(180deg);
+}
+
+.info-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.zoom-rotate {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1) rotateY(0deg);
+    animation: zoomRotate 1s forwards;
+}
+
+@keyframes zoomRotate {
+    0% {
+        transform: translate(-50%, -50%) scale(1) rotateY(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(4) rotateY(360deg);
+    }
+}
+
+.icon-rotate {
+    animation: iconRotate 1s forwards;
+}
+
+@keyframes iconRotate {
+    0% {
+        transform: rotateY(0deg) scale(1);
+    }
+    100% {
+        transform: rotateY(360deg) scale(4);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .info-box {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust height */
+    }
+
+    .info-box img {
+        height: auto; /* Adjust height */
+    }
+}

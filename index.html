@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/directory.css">
+    <link rel="stylesheet" href="css/airport-info.css">
+    <link rel="stylesheet" href="css/flights.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/parking.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/events.css">
+    <script src="js/news.js" defer></script>
+    <script src="js/events.js" defer></script>
+</head>
+<body>
+    <div class="hero-banner">
+        <video autoplay muted loop class="hero-video" id="heroVideo">
+            <source src="assets\videos\s.mp4" type="video/mp4">
+        </video>
+        <div id="navbar"></div>
+    </div>
+
+    <!-- เพิ่มส่วนแสดงข้อมูลเที่ยวบิน -->
+    <div class="flights-container">
+        <div class="flights-header">
+            <h1 class="flights-title">Flights</h1>
+            <div class="flights-nav">
+                <div class="nav-item active">
+                    <i class="fas fa-plane-arrival"></i>
+                    <span>ARRIVALS</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-plane-departure"></i>
+                    <span>DEPARTURES</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <div class="table-header-section">
+                <div class="table-title-group">
+                    <h2 class="table-title">Arrivals</h2>
+                    <div class="date-dropdown">
+                        <button class="date-dropdown-btn">
+                            Today
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="date-dropdown-menu">
+                            <div class="date-dropdown-item">Today</div>
+                            <div class="date-dropdown-item">Tomorrow</div>
+                            <div class="date-dropdown-item">Next 7 Days</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-flights">
+                    <form class="search-input-wrapper" action="/Flights " method="GET">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" 
+                               name="search" 
+                               placeholder="Search flights" 
+                               class="search-input">
+                    </form>
+                </div>
+            </div>
+            <div class="flights-table">
+                <div class="table-controls">
+
+                </div>
+                <div class="table-header">
+                    <div>TIME</div>
+                    <div>ORIGIN</div>
+                    <div>FLIGHT NUMBER</div>
+                    <div>AIRLINE</div>
+                    <div>BAGGAGE</div>
+                    <div>GATE</div>
+                    <div>STATUS</div>
+                    <div>NOTIFY ME</div>
+                </div>
+                <div class="flight-rows">
+                    <!-- ข้อมูลเที่ยวบินจะถูกเพิ่มโดย JavaScript -->
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="#">
+                    VIEW MORE
+                    <i class="fas fa-arrow-right-long"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="airport-info">
+        <div class="info-header">
+            <h1 class="location-title">Suvarnabhumi<br>International Airport<br><span class="airport-code">(BKK)</span></h1>
+            <div class="weather-info">
+                <div class="time-display">
+                    <i class="far fa-clock"></i>
+                    <span>1:00 PM</span>
+                    <span class="separator">•</span>
+                    <span>Tuesday</span>
+                </div>
+                <div class="weather-display">
+                    <i class="fas fa-temperature-high"></i>
+                    <span>32°C</span>
+                    <span class="separator">•</span>
+                    <i class="fas fa-cloud"></i>
+                    <span>Scattered Clouds</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-grid">
+            <a href="#" class="menu-card">
+                <div class="icon-box">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <div class="card-text">
+                    <h3>เที่ยวบิน</h3>
+                    <p>ขาเข้าและขาออก</p>
+                </div>
+            </a>
+
+            <a href="#" class="menu-card">
+                <div class="icon-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="card-text">
+                    <h3>แผนที่สนามบิน</h3>
+                    <p>นำทางและสำรวจสนามบิน</p>
+                </div>
+            </a>
+
+            <a href="#" class="menu-card">
+                <div class="icon-box">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div class="card-text">
+                    <h3>ศูนย์บริการ</h3>
+                    <p>บริการลูกค้า, คำถามที่พบบ่อย</p>
+                </div>
+            </a>
+
+            <a href="#" class="menu-card">
+                <div class="icon-box">
+                    <i class="fas fa-parking"></i>
+                </div>
+                <div class="card-text">
+                    <h3>ที่จอดรถ</h3>
+                    <p>แผนที่, ข้อมูล และบริการรับฝากรถ</p>
+                </div>
+            </a>
+
+            <a href="#" class="menu-card">
+                <div class="icon-box">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="card-text">
+                    <h3>ช้อปและร้านอาหาร</h3>
+                    <p>ดิวตี้ฟรี, ร้านอาหาร, ร้านค้า</p>
+                </div>
+            </a>
+
+            <a href="#" class="menu-card">
+                <div class="icon-box">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="card-text">
+                    <h3>คู่มือสนามบิน</h3>
+                    <p>สิ่งอำนวยความสะดวก, เลานจ์, ห้องละหมาด</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="alert-card">
+            <div class="alert-text">
+                <h3>วางแผนล่วงหน้า มีการปรับปรุงเส้นทางและการจราจรที่สนามบินสุวรรณภูมิ</h3>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="alert-image">
+                <img src="images\al.jpg" alt="Suvarnabhumi Airport aerial view">
+            </div>
+        </div>
+
+        <div class="explore-section">
+            <button class="explore-btn">
+                สำรวจ <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="directory-section">
+        <div class="directory-header">
+            <h2 class="directory-title">
+                Shop & Eat Directory
+                <i class="fas fa-info-circle info-icon"></i>
+            </h2>
+            <button class="airport-map-btn">
+                <i class="fas fa-map-marker-alt"></i>
+                Airport Map
+            </button>
+        </div>
+
+        <div class="nav-container">
+            <div class="terminal-group">
+                <button class="terminal-btn active">All</button>
+                <button class="terminal-btn">T1</button>
+                <button class="terminal-btn">T2</button>
+                <button class="terminal-btn">T3</button>
+                <button class="terminal-btn">T4</button>
+            </div>
+
+            <div class="category-group">
+                <a href="#" class="category-link active">All</a>
+                <a href="#" class="category-link">Shop</a>
+                <a href="#" class="category-link">Eat & Drink</a>
+                <a href="#" class="category-link">Duty Free</a>
+                <a href="#" class="category-link">Luxury</a>
+            </div>
+
+            <div class="subcategory-group">
+                <a href="#" class="subcategory-tag active">All</a>
+                <a href="#" class="subcategory-tag">Beauty</a>
+                <a href="#" class="subcategory-tag">Health</a>
+                <a href="#" class="subcategory-tag">Gifts & Souvenirs</a>
+                <a href="#" class="subcategory-tag">Restaurant</a>
+                <a href="#" class="subcategory-tag">Fashion</a>
+                <a href="#" class="subcategory-tag">Foreign Exchange</a>
+            </div>
+        </div>
+
+        <div class="shop-container">
+            <div class="shop-grid">
+                <div class="shop-card">
+                    <img src="../assets/images/shops/shop1.jpg" alt="Shop 1" class="shop-image">
+                    <div class="shop-info">
+                        <h3>AFL Kitchen & Bar</h3>
+                        <div class="shop-meta">
+                            <span class="time">6AM-9PM</span>
+                        </div>
+                        <p class="shop-description">Nothing unites Australians quite like the AFL. The AFL Kitchen & Bar combines our love for food, drinks, travel and football. Families can relish when...</p>
+                        <div class="shop-tags">
+                            <span class="tag">BAR</span>
+                            <span class="tag">CAFE</span>
+                            <span class="tag">DINNER</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- More shop cards... -->
+            </div>
+        
+        </div>
+
+        <div class="see-all">
+            <a href="#" class="see-all-link">
+                SEE ALL
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <section class="airport-parking">
+        <div class="airport-parking__booking">
+            <div class="airport-parking__header">
+                <h2 class="airport-parking__title">จองที่จอดรถ</h2>
+                <p class="airport-parking__subtitle">จองที่จอดรถออนไลน์ ประหยัดเวลาและค่าใช้จ่าย</p>
+            </div>
+            
+            <form class="airport-parking__form">
+                <div class="airport-parking__dates">
+                    <div class="airport-parking__input-group">
+                        <label class="airport-parking__label">วันที่จอด</label>
+                        <input type="datetime-local" 
+                               name="parkingStartDate" 
+                               class="airport-parking__input" 
+                               required>
+                    </div>
+                    <div class="airport-parking__input-group">
+                        <label class="airport-parking__label">วันที่รับรถ</label>
+                        <input type="datetime-local" 
+                               name="parkingEndDate" 
+                               class="airport-parking__input" 
+                               required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="airport-parking__submit">
+                    จองที่จอดรถ
+                </button>
+            </form>
+        </div>
+        
+        <img src="images/p.jpg" 
+             alt="Airport Parking" 
+             class="airport-parking__image">
+    </section>
+
+    <section class="latest-news">
+        <div class="section-header">
+            <h2 class="section-title">
+                <i class="fas fa-newspaper gold-icon"></i>
+                ข่าวล่าสุด
+            </h2>
+        </div>
+        
+        <div class="news-grid">
+            <!-- ข้อมูลข่าวจะถูกเพิ่มโดย JavaScript -->
+        </div>
+    </section>
+
+    <section class="upcoming-events">
+        <div class="events-header">
+            <h2 class="events-title">
+                <i class="fas fa-calendar-alt gold-icon"></i>
+                กิจกรรมที่กำลังจะมาถึง
+            </h2>
+            <a href="#" class="see-all-link">ดูทั้งหมด <i class="fas fa-chevron-right"></i></a>
+        </div>
+        
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-image-wrapper">
+                    <div class="event-date">
+                        <span class="month">ม.ค.</span>
+                        <span class="day">29</span>
+                    </div>
+                    <img src="images/e1.jpg" alt="การประชุมพัฒนาสนามบิน" class="event-image">
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">การประชุมแผนพัฒนาสนามบินสุวรรณภูมิ ระยะที่ 3</h3>
+                    <p class="event-time"><i class="far fa-calendar"></i> 29 มกราคม 2567</p>
+                    <a href="#" class="event-details">รายละเอียด <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-image-wrapper">
+                    <div class="event-date">
+                        <span class="month">ก.พ.</span>
+                        <span class="day">06-10</span>
+                    </div>
+                    <img src="images/e2.jpg" alt="เทศกาลตรุษจีน" class="event-image">
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">เทศกาลตรุษจีนสุวรรณภูมิ 2567 "มหัศจรรย์แห่งมังกรทอง"</h3>
+                    <p class="event-time"><i class="far fa-calendar"></i> 6-10 กุมภาพันธ์ 2567</p>
+                    <a href="#" class="event-details">รายละเอียด <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-image-wrapper">
+                    <div class="event-date">
+                        <span class="month">ก.พ.</span>
+                        <span class="day">14</span>
+                    </div>
+                    <img src="images/e3.jpg" alt="วันวาเลนไทน์" class="event-image">
+                </div>
+                <div class="event-content">
+                    <h3 class="event-title">สุวรรณภูมิ วาเลนไทน์ 2567 "Love is in the Air"</h3>
+                    <p class="event-time"><i class="far fa-calendar"></i> 14 กุมภาพันธ์ 2567</p>
+                    <a href="#" class="event-details">รายละเอียด <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h2 class="contact-title">ติดต่อเรา</h2>
+        <p class="contact-description">
+            เรายินดีรับฟังข้อเสนอแนะของท่าน และจะตอบกลับภายใน 72 ชั่วโมงทำการ หากมีข้อสงสัยเร่งด่วน กรุณาติดต่อ Call Center ท่าอากาศยานสุวรรณภูมิตามช่องทางด้านล่าง
+        </p>
+        
+        <div class="contact-grid">
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <div class="contact-info">
+                    <h3>สายด่วนในประเทศ</h3>
+                    <a href="tel:1722">1722</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-globe"></i>
+                <div class="contact-info">
+                    <h3>สายด่วนต่างประเทศ</h3>
+                    <a href="tel:+6623513000">+66 (0) 2351 3000</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-box"></i>
+                <div class="contact-info">
+                    <h3>ของหาย</h3>
+                    <a href="tel:+6623513000">+66 (0) 2132 9950</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div class="contact-info">
+                    <h3>อีเมลติดต่อ</h3>
+                    <a href="mailto:contact@airportthai.co.th">contact@airportthai.co.th</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer" class="fade-in"></div>
+    <script src="js/directory.js"></script>
+    <script src="js/airport-info.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js\navbar.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/flights.js"></script>
+    <script src="js/airport-parking.js" defer></script>
+</body>
+</html>

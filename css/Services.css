@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    position: relative; 
+    padding-bottom: 60px; 
+    box-sizing: border-box; 
+    background-color: #f5f0f0; 
+}
+.banner {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    height: 600px;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #666;
+}
+
+.card-extra {
+    display: none;
+    width: 80%;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-extra h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-extra h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.card-extra p {
+    margin: 10px 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+.card-extra table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.card-extra th, .card-extra td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.card-extra th {
+    background-color: #e0e0e0;
+    color: #333;
+    font-weight: bold;
+}
+
+.card.active {
+    background-color: lightblue;
+}
+
+.terminal-maps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.terminal-maps div {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.terminal-maps img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.extra-image {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transportation-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.transportation-item {
+    flex: 1;
+    margin: 10px;
+    max-width: 30%;
+}
+
+.pet-guide-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.pet-guide-item {
+    flex: 1;
+    margin: 10px;
+    max-width: 45%;
+    text-align: left;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pet-guide-item h4 {
+    margin-bottom: 10px;
+}
+
+.pet-guide-item p {
+    margin: 5px 0;
+}
+
+.card-extra-3 h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.pet-icon {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
